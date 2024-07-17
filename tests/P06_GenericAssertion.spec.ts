@@ -49,12 +49,3 @@ test('Generic Assertion', async({page})=>{
     expect(arr2).toContainEqual({no:100})
 
 })
-
-test('Nutella arama sonucu', async({page})=>{
-
-    await page.goto('https://www.google.com/')
-    await page.locator('#APjFqb').fill('Nutella')
-    await page.locator("//*[@name='btnK']").nth(1).press('Enter');
-
-
-})
