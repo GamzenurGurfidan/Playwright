@@ -11,6 +11,13 @@ test('OpenHRM Panel Giris', async ({page})=>{
     await page.getByPlaceholder('Password').fill('admin123')
     await page.getByRole('button',{name: ' Login '}).click();
     await expect(page.getByText('Dashboard').nth(1)).toBeVisible() 
+
+    const dashboardLocate = page.getByText('Dashboard').nth(0)
+    await expect(dashboardLocate).toBeVisible();
+
     // birden fazla oge ayni text(vb. ) ile yer aliyorsa nth(n) ile istenilene ulasilir. 
     // n index numarasini alir 1. eleman 0. indextedir
+
+
+
 })
